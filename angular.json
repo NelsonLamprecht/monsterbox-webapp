@@ -133,7 +133,9 @@
         },
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
-          "options": {}
+          "options": {
+            "baseHref":"https://nelsonlamprecht.github.io/monsterbox-webapp/"
+          }
         }
       }
     }
