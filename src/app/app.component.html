@@ -56,20 +56,20 @@
         {{deviceEndPoint}}
       </div>
       <div *ngIf="!MonsterBox_IsConnected">
-        <input type="text" pInputText placeholder="hostname" class="ui-width-50" [(ngModel)]="deviceControllerHostName">
+        <input type="text" pInputText placeholder="hostname" class="" [(ngModel)]="deviceControllerHostName">
       </div>
     </div>
     <div class="col-12" *ngIf="!MonsterBox_IsConnected">
-      <button pButton type="button" label="Connect" class="ui-button-raised ui-button-primary ui-width-50"
+      <button pButton type="button" label="Connect" class="ui-button-raised ui-button-primary "
         (click)="clickedConnect()"></button>
     </div>
     <div class="col-12" *ngIf="MonsterBox_IsConnected">
-      <button pButton type="button" label="Start" class="ui-button-raised ui-button-success ui-width-50"
+      <button pButton type="button" label="Start" class="ui-button-raised ui-button-success "
         [disabled]="!MonsterBox_IsConnected"
         (click)="clickedStart()"></button>
     </div>
     <div class="col-12" *ngIf="MonsterBox_IsConnected">
-      <button pButton type="button" label="Stop" class="ui-button-raised ui-button-danger ui-width-50"
+      <button pButton type="button" label="Stop" class="ui-button-raised ui-button-danger "
         [disabled]="!MonsterBox_IsConnected"
         (click)="clickedStop()"></button>
     </div>    
