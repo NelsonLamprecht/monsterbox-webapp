@@ -134,7 +134,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref":"https://nelsonlamprecht.github.io/monsterbox-webapp/"
+            "baseHref":"/monsterbox-webapp/"
           }
         }
       }
