@@ -66,10 +66,10 @@ export class AppComponent {
   changeDelayTimeLow(value) {
     this.deviceControllerService.SetDelayTimeLow(value).subscribe(response => {
       if (response == true) {
-        this.messageService.add({ key: 'deviceresponse', severity: 'success', summary: 'changeDelayTimeLow: Accepted' });
+        this.messageService.add({ key: 'deviceresponse', severity: 'success', summary: `DelayTimeLow ${value}: Accepted` });
       }
       else {
-        this.messageService.add({ key: 'deviceresponse', severity: 'error', summary: 'changeDelayTimeLow: Invalid Response' })
+        this.messageService.add({ key: 'deviceresponse', severity: 'error', summary: 'DelayTimeLow: Invalid Response' })
       }
     });
   }
@@ -77,10 +77,10 @@ export class AppComponent {
   changeDelayTimeHigh(value) {
     this.deviceControllerService.SetDelayTimeHigh(value).subscribe(response => {
       if (response == true) {
-        this.messageService.add({ key: 'deviceresponse', severity: 'success', summary: 'changeDelayTimeHigh: Accepted' });
+        this.messageService.add({ key: 'deviceresponse', severity: 'success', summary: `DelayTimeHigh ${value}: Accepted` });
       }
       else {
-        this.messageService.add({ key: 'deviceresponse', severity: 'error', summary: 'changeDelayTimeHigh: Invalid Response' })
+        this.messageService.add({ key: 'deviceresponse', severity: 'error', summary: 'DelayTimeHigh: Invalid Response' })
       }
     });
   }
@@ -88,10 +88,10 @@ export class AppComponent {
   changeRepetitionsLow(value) {
     this.deviceControllerService.SetRepetitionsLow(value).subscribe(response => {
       if (response == true) {
-        this.messageService.add({ key: 'deviceresponse', severity: 'success', summary: 'changeRepetitionsLow: Accepted' });
+        this.messageService.add({ key: 'deviceresponse', severity: 'success', summary: `RepetitionsLow ${value}: Accepted` });
       }
       else {
-        this.messageService.add({ key: 'deviceresponse', severity: 'error', summary: 'changeRepetitionsLow: Invalid Response' })
+        this.messageService.add({ key: 'deviceresponse', severity: 'error', summary: 'RepetitionsLow: Invalid Response' })
       }
     });
   }
@@ -99,10 +99,10 @@ export class AppComponent {
   changeRepetitionsHigh(value) {
     this.deviceControllerService.SetRepetitionsHigh(value).subscribe(response => {
       if (response == true) {
-        this.messageService.add({ key: 'deviceresponse', severity: 'success', summary: 'changeRepetitionsHigh: Accepted' });
+        this.messageService.add({ key: 'deviceresponse', severity: 'success', summary: `RepetitionsHigh ${value}: Accepted` });
       }
       else {
-        this.messageService.add({ key: 'deviceresponse', severity: 'error', summary: 'changeRepetitionsHigh: Invalid Response' })
+        this.messageService.add({ key: 'deviceresponse', severity: 'error', summary: 'RepetitionsHigh: Invalid Response' })
       }
     });
   }
