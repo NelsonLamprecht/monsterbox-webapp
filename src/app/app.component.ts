@@ -16,9 +16,9 @@ export class AppComponent {
   private MonsterBox_Hostname_Cookie: string = "MonsterBox_Hostname";
   MonsterBox_IsConnected: boolean = false;
   delaytimelow: number = 50;
-  delaytimehigh: number = 200;
-  repetitionslow: number = 5;
-  repetitionshigh: number = 10;
+  delaytimehigh: number = 100;
+  repetitionslow: number = 10;
+  repetitionshigh: number = 20;
   deviceControllerHostName: string;
   deviceEndPoint: string;
 

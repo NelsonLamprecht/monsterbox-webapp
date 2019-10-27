@@ -36,7 +36,7 @@
       <p-spinner 
       [disabled]="!MonsterBox_IsConnected"
       [(ngModel)]="delaytimelow" 
-      (ngModelChange)="changeDelayTimeLow($event)" [min]="50" [max]="100"></p-spinner>
+      (ngModelChange)="changeDelayTimeLow($event)" [min]="50"></p-spinner>
     </div>
   </div>
   <div class="row text-center" *ngIf="MonsterBox_IsConnected">
@@ -45,7 +45,7 @@
       <p-spinner       
       [disabled]="!MonsterBox_IsConnected"
       [(ngModel)]="delaytimehigh" 
-      (ngModelChange)="changeDelayTimeHigh($event)" [min]="200" [max]="400"></p-spinner>
+      (ngModelChange)="changeDelayTimeHigh($event)" [min]="50" [max]="100"></p-spinner>
     </div>
   </div>
   <div class="row text-center" *ngIf="MonsterBox_IsConnected">
@@ -54,7 +54,7 @@
       <p-spinner 
       [disabled]="!MonsterBox_IsConnected"
       [(ngModel)]="repetitionslow" 
-      (ngModelChange)="changeRepetitionsLow($event)" [min]="5" [max]="10"></p-spinner>
+      (ngModelChange)="changeRepetitionsLow($event)" [min]="10"></p-spinner>
     </div>
   </div>
   <div class="row text-center" *ngIf="MonsterBox_IsConnected">
@@ -63,7 +63,7 @@
       <p-spinner 
       [disabled]="!MonsterBox_IsConnected"
       [(ngModel)]="repetitionshigh" 
-      (ngModelChange)="changeRepetitionsHigh($event)" [min]="10" [max]="20"></p-spinner>
+      (ngModelChange)="changeRepetitionsHigh($event)" [min]="10" [max]="50"></p-spinner>
     </div>
   </div>
   <!-- Footer -->
