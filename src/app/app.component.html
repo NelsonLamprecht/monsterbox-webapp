@@ -16,16 +16,16 @@
       </div>
     </div>
     <div class="col-12" *ngIf="!MonsterBox_IsConnected">
-      <button pButton type="button" label="Connect" class="ui-button-raised ui-button-primary "
+      <button pButton type="button" label="Connect" class="ui-button-raised ui-button-primary text-selection-none"
         (click)="clickedConnect()"></button>
     </div>
     <div class="col-12" *ngIf="MonsterBox_IsConnected">
-      <button pButton type="button" label="Start" class="ui-button-raised ui-button-success "
+      <button pButton type="button" label="Start" class="ui-button-raised ui-button-success text-selection-none"
         [disabled]="!MonsterBox_IsConnected"
         (click)="clickedStart()"></button>
     </div>
     <div class="col-12" *ngIf="MonsterBox_IsConnected">
-      <button pButton type="button" label="Stop" class="ui-button-raised ui-button-danger "
+      <button pButton type="button" label="Stop" class="ui-button-raised ui-button-danger text-selection-none"
         [disabled]="!MonsterBox_IsConnected"
         (click)="clickedStop()"></button>
     </div>    
