@@ -60,6 +60,14 @@ margin: 10px 0;
 font-size: 3em;
 }
 
+.text-selection-none{
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none;
+}
+
 :host ::ng-deep .custom-toast .ui-toast-message {
    
 }
