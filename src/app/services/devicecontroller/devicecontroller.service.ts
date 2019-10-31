@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders, HttpResponse, HttpSentEvent, HttpHeaderRespons
 import { isNullOrUndefined } from 'util';
 
 import { Observable, of, Subject } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { catchError, timeout } from 'rxjs/operators';
 
 const headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
 const httpOptions: { headers; observe; responseType; } = {
@@ -196,7 +196,9 @@ export class DeviceControllerService {
       this.endpointUrl,
       this.createStartRequest(),
       httpOptions)
-      .pipe(catchError(this.handleError('sendStart', [])));
+      .pipe(
+        timeout(1000),
+        catchError(this.handleError('sendStart', [])));
   }
 
   private sendStop() : Observable<any[] | HttpSentEvent | 
@@ -206,7 +208,9 @@ export class DeviceControllerService {
       this.endpointUrl,
       this.createStopRequest(),
       httpOptions)
-      .pipe(catchError(this.handleError('sendStop', [])));
+      .pipe(
+        timeout(1000),
+        catchError(this.handleError('sendStop', [])));
   }
 
   private sendSetDelayTimeLow(value: number) : Observable<any[] | HttpSentEvent | 
@@ -216,7 +220,9 @@ export class DeviceControllerService {
       this.endpointUrl,
       this.createSetDelayTimeLowRequest(value),
       httpOptions)
-      .pipe(catchError(this.handleError('sendSetDelayTimeLow', [])));
+      .pipe(
+        timeout(1000),
+        catchError(this.handleError('sendSetDelayTimeLow', [])));
   }
 
   private sendSetDelayTimeHigh(value: number) : Observable<any[] | HttpSentEvent | 
@@ -226,7 +232,9 @@ export class DeviceControllerService {
       this.endpointUrl,
       this.createSetDelayTimeHighRequest(value),
       httpOptions)
-      .pipe(catchError(this.handleError('sendSetDelayTimeHigh', [])));
+      .pipe(
+        timeout(1000),
+        catchError(this.handleError('sendSetDelayTimeHigh', [])));
   } 
 
   private sendSetRepetitionsLow(value: number) : Observable<any[] | HttpSentEvent | 
@@ -236,7 +244,9 @@ export class DeviceControllerService {
       this.endpointUrl,
       this.createSetRepetitionsLowRequest(value),
       httpOptions)
-      .pipe(catchError(this.handleError('sendSetRepetitionsLow', [])));
+      .pipe(
+        timeout(1000),
+        catchError(this.handleError('sendSetRepetitionsLow', [])));
   }
 
   private sendSetRepetitionsHigh(value: number) : Observable<any[] | HttpSentEvent | 
@@ -246,7 +256,9 @@ export class DeviceControllerService {
       this.endpointUrl,
       this.createSetRepetitionsHighRequest(value),
       httpOptions)
-      .pipe(catchError(this.handleError('sendSetRepetitionsHigh', [])));
+      .pipe(
+        timeout(1000),
+        catchError(this.handleError('sendSetRepetitionsHigh', [])));
   } 
 
   private validateResponse(httpResponse: HttpResponse<string>, expectedDeviceResponse: string): boolean {
