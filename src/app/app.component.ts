@@ -44,7 +44,7 @@ export class AppComponent {
   clickedStart() {
     this.deviceControllerService.Start().subscribe(response => {
       if (response == true) {
-        this.messageService.add({ key: 'deviceresponse', severity: 'success', summary: 'Start: Accepted' });
+        console.debug('Start: Accepted');
       }
       else {
         this.messageService.add({ key: 'deviceresponse', severity: 'error', summary: 'Start: Invalid Response' })
@@ -55,7 +55,7 @@ export class AppComponent {
   clickedStop() {
     this.deviceControllerService.Stop().subscribe(response => {
       if (response == true) {
-        this.messageService.add({ key: 'deviceresponse', severity: 'success', summary: 'Stop: Accepted' });
+        console.debug('Stop: Accepted');
       }
       else {
         this.messageService.add({ key: 'deviceresponse', severity: 'error', summary: 'Stop: Invalid Response' })
@@ -66,7 +66,7 @@ export class AppComponent {
   changeDelayTimeLow(value) {
     this.deviceControllerService.SetDelayTimeLow(value).subscribe(response => {
       if (response == true) {
-        this.messageService.add({ key: 'deviceresponse', severity: 'success', summary: `DelayTimeLow ${value}: Accepted` });
+        console.debug(`DelayTimeLow ${value}: Accepted`);
       }
       else {
         this.messageService.add({ key: 'deviceresponse', severity: 'error', summary: 'DelayTimeLow: Invalid Response' })
@@ -77,7 +77,7 @@ export class AppComponent {
   changeDelayTimeHigh(value) {
     this.deviceControllerService.SetDelayTimeHigh(value).subscribe(response => {
       if (response == true) {
-        this.messageService.add({ key: 'deviceresponse', severity: 'success', summary: `DelayTimeHigh ${value}: Accepted` });
+        console.debug(`DelayTimeHigh ${value}: Accepted`);
       }
       else {
         this.messageService.add({ key: 'deviceresponse', severity: 'error', summary: 'DelayTimeHigh: Invalid Response' })
@@ -88,7 +88,7 @@ export class AppComponent {
   changeRepetitionsLow(value) {
     this.deviceControllerService.SetRepetitionsLow(value).subscribe(response => {
       if (response == true) {
-        this.messageService.add({ key: 'deviceresponse', severity: 'success', summary: `RepetitionsLow ${value}: Accepted` });
+        console.debug(`RepetitionsLow ${value}: Accepted`);
       }
       else {
         this.messageService.add({ key: 'deviceresponse', severity: 'error', summary: 'RepetitionsLow: Invalid Response' })
@@ -98,8 +98,8 @@ export class AppComponent {
 
   changeRepetitionsHigh(value) {
     this.deviceControllerService.SetRepetitionsHigh(value).subscribe(response => {
-      if (response == true) {
-        this.messageService.add({ key: 'deviceresponse', severity: 'success', summary: `RepetitionsHigh ${value}: Accepted` });
+      if (response == true) {        
+        console.debug(`RepetitionsHigh ${value}: Accepted`)
       }
       else {
         this.messageService.add({ key: 'deviceresponse', severity: 'error', summary: 'RepetitionsHigh: Invalid Response' })
